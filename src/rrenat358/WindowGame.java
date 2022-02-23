@@ -14,8 +14,8 @@ public class WindowGame extends JFrame {
     public static void main(String[] args) throws IOException {
         background = ImageIO.read(WindowGame.class.getResourceAsStream("Sky-01.jpg"));
         gameOver = ImageIO.read(WindowGame.class.getResourceAsStream("GAME-OVER-02.png"));
-        drop = ImageIO.read(WindowGame.class.getResourceAsStream("GitHub.1f4a7.png"));
-
+//        drop = ImageIO.read(WindowGame.class.getResourceAsStream("GitHub.1f4a7.png"));
+        drop = ImageIO.read(WindowGame.class.getResourceAsStream("drop.02.png"));
 
         windowGame = new WindowGame(); //создаём объект WindowGame()
         //настройка окна ↓
