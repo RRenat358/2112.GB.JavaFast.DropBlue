@@ -23,7 +23,7 @@ public class WindowGame extends JFrame {
     //вермя текущее
     private static long lastFrameTime=System.nanoTime();
 
-    private static int scoreClick; //очки пойманых каплей
+    private static int scoreClick; //очки пойманых капель
 
     private static Image gameOver;
 
