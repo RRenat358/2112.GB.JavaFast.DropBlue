@@ -12,10 +12,10 @@ public class WindowGame extends JFrame {
     private static Image drop;
 
     public static void main(String[] args) throws IOException {
-        background = ImageIO.read(WindowGame.class.getResourceAsStream("Sky-01.jpg"));
-        gameOver = ImageIO.read(WindowGame.class.getResourceAsStream("GAME-OVER-02.png"));
+        background = ImageIO.read(WindowGame.class.getResourceAsStream("images/Sky-01.jpg"));
+        gameOver = ImageIO.read(WindowGame.class.getResourceAsStream("images/GAME-OVER-02.png"));
 //        drop = ImageIO.read(WindowGame.class.getResourceAsStream("GitHub.1f4a7.png"));
-        drop = ImageIO.read(WindowGame.class.getResourceAsStream("drop.02.png"));
+        drop = ImageIO.read(WindowGame.class.getResourceAsStream("images/drop.03.png"));
 
         windowGame = new WindowGame(); //создаём объект WindowGame()
         //настройка окна ↓
@@ -37,7 +37,7 @@ public class WindowGame extends JFrame {
     public static void onRepaint(Graphics g){
         g.drawImage(background, 0, 0, null);
         g.drawImage(drop, 100, 100, null);
-        g.drawImage(gameOver, 1, 1, null);
+        g.drawImage(gameOver, 330, 130, null);
 //        g.fillOval(10,10,200,100);
 
     }
