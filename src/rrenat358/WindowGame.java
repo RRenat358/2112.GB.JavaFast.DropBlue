@@ -1,18 +1,29 @@
 package rrenat358;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class WindowGame extends JFrame {
     private static WindowGame windowGame;
+    private static Image background;
+    private static Image gameOver;
+    private static Image drop;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        background = ImageIO.read(WindowGame.class.getResourceAsStream("Sky-01.jpg"));
+        gameOver = ImageIO.read(WindowGame.class.getResourceAsStream("GAME-OVER-02.png"));
+        drop = ImageIO.read(WindowGame.class.getResourceAsStream("GitHub.1f4a7.png"));
+
+
         windowGame = new WindowGame(); //создаём объект WindowGame()
         //настройка окна ↓
         windowGame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        windowGame.setLocation(200,100);
-        windowGame.setSize(800,600);
+        windowGame.setLocation(200,10);
+        windowGame.setSize(1200,800);
         windowGame.setResizable(false);
+
 
         FieldGame fieldGame = new FieldGame(); //создаём объект класса fieldGame
         windowGame.add(fieldGame); //рисуем в нашем окне
@@ -24,7 +35,10 @@ public class WindowGame extends JFrame {
 
     //новый метод для рисования
     public static void onRepaint(Graphics g){
-        g.fillOval(10,10,200,100);
+        g.drawImage(background, 0, 0, null);
+        g.drawImage(drop, 100, 100, null);
+        g.drawImage(gameOver, 1, 1, null);
+//        g.fillOval(10,10,200,100);
 
     }
 
